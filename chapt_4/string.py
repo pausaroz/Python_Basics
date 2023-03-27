@@ -119,3 +119,72 @@ word = "goal"
 # word = "goal"
 word = "f" + word[1:]
 word  # 'foal' 
+
+print("String Methods")
+
+# Converting string case
+"Jean-Luc Picard".lower() # 'jean-luc picard'
+name = "Jean-Luc Picard"
+name.upper()  # 'JEAN-LUC PICARD'
+
+# len() is a stand-alone function.
+len(name) # 15
+
+# Removing Whitespace From a String
+# There are three string methods that you can use to remove whitespace
+# from a string:
+
+# 1. .rstrip() # removes whitespace from the right side of a string:
+name = "Jean-Luc Picard "
+name           # 'Jean-Luc Picard '
+name.rstrip()  # 'Jean-Luc Picard'
+# 2. .lstrip() # removes whitespace from the left-hand side of the string:
+name = " Jean-Luc Picard"
+name           # ' Jean-Luc Picard'
+name.lstrip()  #  'Jean-Luc Picard'
+# 3. .strip()  # remove whitespace from both the left and the right sides of the string
+name = " Jean-Luc Picard "
+name           #' Jean-Luc Picard '
+name.strip()   #'Jean-Luc Picard'
+
+# Determine If a String Starts or Ends With a Particular String
+# Określenie, czy ciąg znaków zaczyna się lub kończy określonym ciągiem znaków
+# .startswith() and .endswith().
+starship = "Enterprise"
+starship.startswith("en")  # False
+starship.startswith("En")  # True
+
+starship.endswith("rise")  # True
+# Just like .startswith(), the .endswith() method is case sensitive:
+starship.endswith("risE")  # False
+
+print("String Methods and Immutability - Metody łańcuchowe i niezmienność")
+
+name = "Picard"
+name.upper() # 'PICARD'
+name         # 'Picard' 
+
+name = "Picard"
+name = name.upper()
+name         # 'PICARD' 
+
+print("Use IDLE to Discover Additional String MethodsRecall")
+# IDLE can help you find new string methods. To see how,
+# first assign a string literal to a variable in the interactive window:
+# >>> starship = "Enterprise"
+# Next, type starship followed by a period, but do not hit Enter.
+# You should see the following in the interactive window:
+# >>> starship.
+# Now wait for a couple of seconds. IDLE displays a list of every string method,
+# which you can scroll through using the arrow keys.
+# A related shortcut in IDLE is the ability to use Tab to automatically
+# fill in text without having to type long names. For instance,
+# if you type only starship.u and hit Tab, then IDLE automatically
+# fills in starship.upper because only one method that begins with
+# a u belongs to starship.
+
+w= """ok
+pk 
+ok 
+kokok
+lplpl"""
