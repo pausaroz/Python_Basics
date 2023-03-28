@@ -200,4 +200,3 @@ print("Number of characters in your text: ", num_chars)
 
 user_input = input("Tell me your password: ")
 print("The first letter ypu entered was: " + user_input[0].upper())
-
