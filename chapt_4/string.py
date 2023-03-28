@@ -184,6 +184,5 @@ print("""Use IDLE to Discover Additional String MethodsRecall
 # fills in starship.upper because only one method that begins with
 # a u belongs to starship.
 
-
-print("4.4 Interact With User Input")
+print("Interact With User Input")
 
