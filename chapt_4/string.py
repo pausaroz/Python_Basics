@@ -168,7 +168,8 @@ name = "Picard"
 name = name.upper()
 name         # 'PICARD' 
 
-print("Use IDLE to Discover Additional String MethodsRecall")
+print("""Use IDLE to Discover Additional String MethodsRecall
+               """)
 # IDLE can help you find new string methods. To see how,
 # first assign a string literal to a variable in the interactive window:
 # >>> starship = "Enterprise"
@@ -183,4 +184,6 @@ print("Use IDLE to Discover Additional String MethodsRecall")
 # fills in starship.upper because only one method that begins with
 # a u belongs to starship.
 
+
+print("4.4 Interact With User Input")
 
