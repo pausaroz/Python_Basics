@@ -185,4 +185,19 @@ print("""Use IDLE to Discover Additional String MethodsRecall
 # a u belongs to starship.
 
 print("Interact With User Input")
+prompt = "Hey, what's up? "
+user_input = input(prompt)
+print("You said: " + user_input.upper())
+
+user_input = input("Please enter some text: ")
+print("You entered: ", user_input)
+
+lowercase_input = user_input.lower()
+print("Your text in lowercase: ", lowercase_input)
+
+num_chars = len(user_input)
+print("Number of characters in your text: ", num_chars)
+
+user_input = input("Tell me your password: ")
+print("The first letter ypu entered was: " + user_input[0].upper())
 
