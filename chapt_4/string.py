@@ -200,3 +200,56 @@ print("Number of characters in your text: ", num_chars)
 
 user_input = input("Tell me your password: ")
 print("The first letter ypu entered was: " + user_input[0].upper())
+
+print("Working With Strings and Numbers ")
+# Using Strings With Arithmetic Operators
+num = '2'
+num + num  # '22'
+
+# You can multiply strings by a number
+num = '12'
+num * 3  # '121212'
+3 * num  # '121212'
+
+# You can NOT multiply strings by a string
+# '12' * '3'  # TypeError: can't multiply sequence by non-int of type 'str'
+
+# You can NOT add a string and a number?
+# "3" + 3  # TypeError: can only concatenate str (not "int") to str
+
+# Converting Strings to Numbers
+num = input("Enter a number to be doubled: ")
+doubled_num = num * 2
+print(doubled_num)  # '22'
+
+# you must convert them from a string type to a number type.
+# There are two functions that you can use to do this:
+# int() # stands for integer and converts objects into whole numbers
+# float() #stands for floating-point number and converts objects
+# into numbers with decimal points
+int("12")    # 12
+float("12")  # 12.0
+
+# you can’t change a string that looks like a floating-point number
+# into an integer
+# because you would lose everything after the decimal point ( because it would result in a loss of precision.)
+# int("12.0")  # ValueError: invalid literal for int() with base 10: '12.0' 
+
+num = input("Enter a number to be doubled: ")
+doubled_num = float(num) * 2
+print(doubled_num)
+
+# Converting Numbers to Strings
+num_pancakes = 10
+# "I am going to eat " + num_pancakes + " pancakes."  # TypeError: can only concatenate str (not "int") to str 
+"I am going to eat " + str(num_pancakes) + " pancakes."
+
+total_pancakes = 10
+pancakes_eaten = 5
+"Only " + str(total_pancakes - pancakes_eaten) + " pancakes left." #  'Only 5 pancakes left.' 
+
+
+num_1 = input("Enter first number: ")
+num_2 = input("Enter secind number: ")
+result = "The product of " + num_1 + " and " + num_2 + " is " + str(float(num_1)*float(num_2))
+print(result)
