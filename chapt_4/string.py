@@ -183,8 +183,4 @@ print("Use IDLE to Discover Additional String MethodsRecall")
 # fills in starship.upper because only one method that begins with
 # a u belongs to starship.
 
-w= """ok
-pk 
-ok 
-kokok
-lplpl"""
+
