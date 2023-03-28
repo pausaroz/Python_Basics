@@ -253,3 +253,38 @@ num_1 = input("Enter first number: ")
 num_2 = input("Enter secind number: ")
 result = "The product of " + num_1 + " and " + num_2 + " is " + str(float(num_1)*float(num_2))
 print(result)
+
+print("""
+Streamline Your Prints""")
+
+#  Suppose you have
+name = "Zaphod"
+heads = 2
+arms = 3
+#  You want to display them in the string - "Zaphod has 2 heads and 3 arms"
+
+# One way to do this is with string concatenation:
+print(name + " has " + str(heads) + " heads and " + str(arms) + " arms")
+# 'Zaphod has 2 heads and 3 arms'
+# This code isn’t the prettiest,
+# and keeping track of what goes inside or outside the quotes can be tough.
+# there’s another way of interpolating strings: formatted string literals,
+# more commonly known as f-strings.
+print(f"{name} has {heads} heads and {arms} arms")  # Zaphod has 2 heads and 3 arms
+n = 3
+m = 4
+print(f"{n} times {m} is {n*m}")  # '3 times 4 is 12'
+# f-strings are available only in Python version 3.6 and above.
+
+# In earlier versions of Python, you can use .format() to get the same results.
+print("{} has {} heads and {} arms".format(name, heads, arms))  # 'Zaphod has 2 heads and 3 arms'
+
+#TODO
+#https://realpython.com/python-f-strings/
+
+weight = float("0.2")
+animal = "newt"
+print( str(weight) + " kg is the weight of the " + animal)     # 0.2 kg is the weight of the newt
+print("{} kg is the weight of the {}".format(weight, animal))  # 0.2 kg is the weight of the newt
+print(f"{weight} kg is the weight of the {animal}")            # 0.2 kg is the weight of the newt
+
