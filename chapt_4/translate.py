@@ -1,5 +1,6 @@
-https://en.wikipedia.org/wiki/Leet
+# https://en.wikipedia.org/wiki/Leet
 sample_expresion = input("Dear User, enter some text: ")
+# example:
 # I like to eat eggs and spam
 sample_expresion = sample_expresion.replace("a", "4")
 sample_expresion = sample_expresion.replace("b", "8")
