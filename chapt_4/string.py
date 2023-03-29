@@ -288,3 +288,24 @@ print( str(weight) + " kg is the weight of the " + animal)     # 0.2 kg is the w
 print("{} kg is the weight of the {}".format(weight, animal))  # 0.2 kg is the weight of the newt
 print(f"{weight} kg is the weight of the {animal}")            # 0.2 kg is the weight of the newt
 
+print("Find a String in a String")
+phrase = "the surprise is in here somewhere"
+phrase.find("surprise") # 4
+# If .find() doesn’t find the desired substring, it will return -1 
+phrase.find("eyjafjallajökull")  # -1
+# Keep in mind that this matching is done exactly, character by character,
+# and is case sensitive.
+"the surprise is in here somewhere".find("SURPRISE")  # -1
+# If a substring appears more than once in a string, then .find()
+# returns the index of only the first appearance,
+# starting from the beginning of the string:
+"I put a string in your string".find("string")  # 8
+33
+# "My number is 555-555-555".find(5)  # TypeError: must be str, not int
+"My number is 555-555-555".find("5")  # 13
+my_story = "I'm telling you the truth; nothing but the truth!"
+my_story.replace("the truth", "lies")  # "I'm telling you lies; nothing but lies!"
+my_story  # "I'm telling you the truth; nothing but the truth!"
+my_story = my_story.replace("the truth", "lies")
+my_story  # "I'm telling you lies; nothing but lies!"
+
