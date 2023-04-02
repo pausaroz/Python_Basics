@@ -56,6 +56,8 @@ print(f"""{num1},
 print("2.")
 num = 175e+3
 
+print("Arithmetic operations and expressions")
+
 
 
 
