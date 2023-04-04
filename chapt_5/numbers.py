@@ -163,3 +163,4 @@ print("Arithmetic operations and expressions")
 
 # Another good practice is to use parentheses
 (2 * 3) -1
+
