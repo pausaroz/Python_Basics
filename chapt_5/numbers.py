@@ -168,3 +168,65 @@ print("Make python to lie to you")
 0.1 + 0.2  # 0.30000000000000004
 # it's not a bug!. It's a floating-point reppresentation error
 
+print("Math functions and number methods")
+# 3 mathematical functions most common
+
+# round() for rounding numbers to some number of decimal places
+# abs() for getting the absolute value of a number
+# pow() for raising a number to some power
+
+# the round() function
+round(2.3)  # 2
+round(2.7)  # 3
+# some unexpected behavior when the number ends in .5
+round(2.56)  # 3
+round(2.5)  # 2
+round(3.5)  # 4
+
+# Python 3 rounds numbers according to a strategy called
+# rounding ties to even.
+
+# A tie is any number whose last digit is five.
+# tie: 2.5, .1415
+# not tie: 1.37
+# When you round ties to even,
+# you first look at the digit one decimal place to
+# the left of the last digit in the tie.
+# If that digit is odd, then you round up.
+# That's why 2.5 rounds down to 2 and 3.5 rounds up to 4
+
+#two argument to round()
+round(3.14159, 3)  # 3.142
+round(2.71828, 2)  # 2.72
+
+round(2.675, 2)  # 2,67
+# expected value: 2.68
+# to understand, read: https://en.wikipedia.org/wiki/IEEE_754#Roundings_to_nearest
+
+# the abc() function
+abs(3)  # 3
+abs(-5.0)  # 5
+abs(-111 + 100)  # 11
+# abs () always returns a positive number
+
+# the pow() function
+pow(2, 3)  # 8
+# 2 * 2 * 2 == 2 ** 3 == 8
+pow(2, -2)  # 0.25
+
+pow(2, 3, 4)  # 0
+(2 ** 3) % 4 == 0
+
+# check if a float is integral
+num = 2.5
+num.is_integer()  # False
+num = 2.0
+num.is_integer()  # True
+
+########
+num_1 = float(input("Enter a number: "))
+print(f"""{num_1} rounded to 2 decimal places is {round(num_1, 2)}
+The absolute value of {num_1} is {abs(num_1)}""")
+num_2 = float(input("Enter another number: "))
+num_3 = num_1 - num_2
+print(f"The diffrence between {num_1} and {num_2} is an integer? {num_3.is_integer()}")
