@@ -164,3 +164,7 @@ print("Arithmetic operations and expressions")
 # Another good practice is to use parentheses
 (2 * 3) -1
 
+print("Make python to lie to you")
+0.1 + 0.2  # 0.30000000000000004
+# it's not a bug!. It's a floating-point reppresentation error
+
