@@ -271,3 +271,17 @@ f"Over {ratio:.2%} of Pythonistas say 'Real Python rocks!'"
 f"{3**.123:.3f}"
 f"{150000:,.2f}"
 f"{2/10:.0%}"  # '20%'
+
+print("complex numbers")  # Liczby zespolone
+# a complex number is a number with two distinct components:
+# real part
+# imaginary part
+n = 1 + 2j
+n       # (1+2j)
+n.real  # 1.0
+n.imag  # 2.0
+n.conjugate()  # (1-2j)
+# conjugate is aboslute value the complex number
+# but with opposite sign
+1 + 2j # complex number
+1 - 2j # conjugate complex number 
