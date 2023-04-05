@@ -230,3 +230,44 @@ The absolute value of {num_1} is {abs(num_1)}""")
 num_2 = float(input("Enter another number: "))
 num_3 = num_1 - num_2
 print(f"The diffrence between {num_1} and {num_2} is an integer? {num_3.is_integer()}")
+print(" ")
+
+print("Print numbers in style")
+# https://docs.python.org/3/library/string.html#format-specification-mini-language
+n = 9.125
+f"The value of n is {n}"      # 'The value of n is 9.125'
+f"The value of n is {n:.2f}"  # 'The value of n is 9.12'
+
+n = 9.126
+f"The value of n is {n:.2f}"  # 'The value of n is 9.13'
+f"The value of n is {n:.1f}" # 'The value of n is 9.1'
+
+n = 1
+f"The value of n is {n:.2f}"  # 'The value of n is 1.00'
+f"The value of n is {n:.3f}"  # 'The value of n is 1.000'
+
+n = 1234567890
+f"The value of n is {n:,}"  # 'The value of n is 1,234,567,890'
+
+n = 1234.56
+f"The value of n is {n:,.2f}"  # 'The value of n is 1,234.56'
+
+balance = 2000.0
+spent = 256.35
+remaining = balance - spent
+remaining  # 1743.65
+f"After spending ${spent:.2f}, I was left with $ {remaining:,.2f}"
+# 'After spending $256.35, I was left with $ 1,743.65'
+
+ratio = 0.9
+f"Over {ratio:.1%} of Pythonistas say 'Real Python rocks!'"
+# "Over 90.0% of Pythonistas say 'Real Python rocks!'"
+f"Over {ratio:.2%} of Pythonistas say 'Real Python rocks!'"
+# "Over 90.00% of Pythonistas say 'Real Python rocks!'"
+# for more information:
+# https://docs.python.org/3/library/string.html#format-string-syntax_
+
+#####
+f"{3**.123:.3f}"
+f"{150000:,.2f}"
+f"{2/10:.0%}"  # '20%'
