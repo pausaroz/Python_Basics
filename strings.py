@@ -176,9 +176,14 @@ pharse.find("soberokde")  # -1
 # "My number is 555-555-555".find(5)
 
 "My number is 555-555-555".find("5")
+
 my_story = "I'm telling you the truth; nothing but the truth!"
 my_story.replace("the truth", "lies")  # "I'm telling you lies; nothing but lies!"
 my_story  # "I'm telling you the truth; nothing but the truth!"
 my_story = my_story.replace("the truth", "lies")  # "I'm telling you lies; nothing but lies!"
 my_story  # "I'm telling you lies; nothing but lies!"
 
+text = "some of the stuff"
+new_text = text.replace("some of", "all")
+new_text = new_text.replace("stuff", "things")
+new_text  # 'all the things'
