@@ -75,4 +75,67 @@ print(cube(3))
 
 # ------6.4------
 
+n = 1
+while n < 5:
+    print(n)
+    n = n + 1
 
+# while n < 6:
+#    print(n)
+## press it to force python to quit: CTRL + C
+
+num = float(input("Enter a positive number: "))
+
+while num <= 0:
+    print("That's not a positive number!")
+    num = float(input("Enter a positive number: "))
+
+for letter in "Python":
+    print(letter)
+
+word = "Python"
+index = 0
+while index < len(word):
+    print(word[index])
+    index = index + 1
+
+for l in range(3):
+    print("Python")
+
+for l in range(10, 20):
+    print(l * l)
+
+amount = float(input("Enter an amount: "))
+
+for num_people in range(2, 6):
+    print(f"{num_people} people: ${amount / num_people:,.2f} each")
+
+for l in range(1, 4):
+    for j in range(4, 7):
+        print(f"l = {l} and j = {j}")
+
+######
+
+# 1.
+for number_int in range(2, 11):
+    print(number_int)
+
+# 2.
+number_int = 2
+while number_int <= 10:
+    print(number_int)
+    number_int = number_int + 1
+
+# 3.
+
+def doubles(number):
+    """Return the result of multiplying an input number by 2."""
+    return number * 2
+
+num_to_duble = int(input("Enter a number: "))
+
+for i in range(3):
+    num_to_duble = doubles(num_to_duble)
+    print(num_to_duble)
+
+######
