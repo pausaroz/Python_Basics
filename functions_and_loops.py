@@ -139,3 +139,52 @@ for i in range(3):
     print(num_to_duble)
 
 ######
+    
+# ------6.5------
+# see file: f_and_l_invest.py
+
+# ------6.6------
+
+x = 2
+x #  2
+x = 3
+x #  3
+
+
+x = "Hello, World!"
+def func():
+    x = 2
+    print(f"Inside 'func', x has the value {x}")
+    
+func() #  Inside 'func', x has the value 2
+print(f"Outside 'func', x has the value {x}") #  Outside 'func', x has the value Hello, World!
+
+
+x = 5
+
+def outer_func():
+    y = 3
+    def inner_func():
+        z = x + y
+        return z
+    return inner_func()
+
+outer_func() #  8
+
+# total = 0
+#
+# def add_to_total(n):
+#     total = total + n
+#
+# add_to_total(5) #  error:
+# total = total + n
+# UnboundLocalError: local variable 'total' referenced before assignment
+# print(total) #  0
+
+total = 0
+
+def add_to_total(n):
+    global total
+    total = total + 5
+add_to_total(5)
+print(total)
