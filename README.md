@@ -1,2 +1,2 @@
 # Python_Basics
-basics knowledge about python
+Basics knowledge about python
