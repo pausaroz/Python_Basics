@@ -202,7 +202,8 @@ elif (sport == "basketball") or (sport == "golf"):
         print("Player 2 wins.")
 else:
     print("Unknown sport.")
-
+#-------
+#-------
 ######
 print("1.")
 user_word = input("Enter a word: ")
@@ -225,5 +226,3 @@ while i:
         print("You lose.")
     
 ######
-#-------
-#-------
