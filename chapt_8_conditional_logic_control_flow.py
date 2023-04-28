@@ -279,16 +279,52 @@
 ##else:
 ##    print("Suspicious activity. The authorities have been alerted.")
 ##
-######
-#1.
-while True:
-    user_words = input("Enter something: (Type 'q' or 'Q' to quit:)")
-    if user_words.lower() == "q":
-        break
-#2.
-for i in range(1, 51):
-    if i % 3 == 0:
-        continue
-    print(i)
-    
-######
+########
+###1.
+##while True:
+##    user_words = input("Enter something: (Type 'q' or 'Q' to quit:)")
+##    if user_words.lower() == "q":
+##        break
+###2.
+##for i in range(1, 51):
+##    if i % 3 == 0:
+##        continue
+##    print(i)
+##    
+########
+##    
+### ------8.6------
+##
+###int("not a number") #  ValueError
+###"1" + 2 #  TypeError
+###print(does_not_exist) #  NameError
+###1 / 0 #  ZeroDivisionError
+###pow(2.0, 1_000_000) #  OverflowError
+###see all exceptions: https://docs.python.org/3/library/exceptions.html
+##try:
+##    number = int(input("Enter an integer: "))
+##except ValueError:
+##    print("That was not an integer")
+##
+##def devide(num1, num2):
+##    try:
+##        print(num1 / num2)
+##    except (TypeError, ZeroDivisionError):
+##        print("Encountered a problem")
+##devide(1, 2)
+##devide(2, 0)
+##devide("ok", 2)
+##
+def devide(num1, num2):
+    try:
+        print(num1 / num2)
+    except TypeError:
+        print("Both arguments must be numbers")
+    except ZeroDivisionError:
+        print("num2 must be not 0")
+
+devide(1, 2)
+devide(2, 0)
+devide("ok", 2)
+
+
