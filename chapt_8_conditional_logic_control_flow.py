@@ -488,6 +488,6 @@ print(f"01 The average number of flips per trial is {avg_flips_per_trial}.")
 
 # ------8.9------
 #challenge
-
+#see file: chapt_8_simulate_an_election.py
 
 
