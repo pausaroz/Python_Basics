@@ -420,74 +420,10 @@
 ########
 ### ------8.8------
 ###challenge
-### 8.8 - Challenge: Simulate a Coin Toss Experiment
-### Solution to challenge
-##
-##
-### Simulate the results of a series of coin tosses and track the results
-##
-### This one is tricky to structure correctly. Try writing out the logic before
-### you start coding. Some additional pointers if you're stuck:
-### 1. You will need to use a `for` loop over a range of trials.
-### 2. For each trial, first you should check the outcome of the first flip.
-### 3. Make sure you add the first flip to the total number of flips.
-### 4. After the first toss, you'll need another loop to keep flipping while you
-###    get the same result as the first flip.
-##
-import random
-##
-##
-####def coin_flip():
-####    """Randomly return 'heads' or 'tails'."""
-####    if random.randint(0, 1) == 0:
-####        return "heads"
-####    else:
-####        return "tails"
-####
-####
-####flips = 0
-####num_trials = 10_000
-####
-####for trial in range(num_trials):
-####    if coin_flip() == "heads":
-####        flips = flips + 1
-####        while coin_flip() == "heads":
-####            flips = flips + 1
-####        flips = flips + 1
-####    else:
-####        flips = flips + 1
-####        while coin_flip() == "tails":
-####            flips = flips + 1
-####        flips = flips + 1
-####
-####avg_flips_per_trial = flips / num_trials
-####print(f"The average number of flips per trial is {avg_flips_per_trial}.")
-####
+###see file: chapt_8_simulate_a_coin_toss_experiment
 
-flips = 0
-num_trials = 2
-
-for trial in range(num_trials):
-    # spr dla rzytu 1st
-    if random.randint(0, 1) == 0:
-        flips = flips + 1
-        #jesli rzuci co innego koniec pętli
-        while random.randint(0, 1) == 0:
-            flips = flips + 1
-        flips = flips + 1
-        print(flips)
-    else:
-        flips = flips + 1
-        while random.randint(0, 1) == 1:
-            flips = flips + 1
-        flips = flips + 1
-        print(flips)
-print(flips)
-avg_flips_per_trial = flips / num_trials
-print(f"01 The average number of flips per trial is {avg_flips_per_trial}.")
-
-# ------8.9------
-#challenge
-#see file: chapt_8_simulate_an_election.py
+###------8.9------
+###challenge
+###see file: chapt_8_simulate_an_election.py
 
 
