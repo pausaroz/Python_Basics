@@ -224,3 +224,98 @@ len(breakfast) == 3
 #8.
 lengths = [len(eat) for eat in breakfast]
 ######
+
+# ------9.3------
+
+
+two_by_two = [[1, 2], [3, 4]]
+len(two_by_two) #  2
+two_by_two[0] #  [1, 2]
+two_by_two[1] #  [3, 4]
+two_by_two[1][0] #  3
+
+
+animals = ["lion", "tiger", "frumious Brandersnatch"]
+large_cats = animals
+large_cats #  ['lion', 'tiger', 'frumious Brandersnatch']
+large_cats.append("Tigger")
+large_cats #  ['lion', 'tiger', 'frumious Brandersnatch', 'Tigger']
+animals #  ['lion', 'tiger', 'frumious Brandersnatch', 'Tigger']
+
+animals = ["lion", "tiger", "frumious Brandersnatch"]
+large_cats = animals[:]
+large_cats #  ['lion', 'tiger', 'frumious Brandersnatch']
+large_cats.append("leopard")
+large_cats #  ['lion', 'tiger', 'frumious Brandersnatch', 'leopard']
+animals #  ['lion', 'tiger', 'frumious Brandersnatch']
+
+#shallow copy
+matrix1 = [[1, 2], [3, 4]]
+matrix2 = matrix1[:]
+matrix2[0] = [5, 6]
+matrix2 #  [[5, 6], [3, 4]]
+matrix1 #  [[1, 2], [3, 4]]
+
+matrix2[1][0] = 1
+matrix2 #  [[5, 6], [1, 4]]
+matrix1 #  [[1, 2], [1, 4]]
+
+#deep copy
+matrix1 #  [[1, 2], [1, 4]]
+import copy
+matrix3 = copy.deepcopy(matrix1)
+matrix3[1][0] = 3
+matrix3 #  [[1, 2], [3, 4]]
+matrix1 #  [[1, 2], [1, 4]]
+
+
+colors = ["red", "yellow", "green", "blue"]
+colors.sort()
+colors #  ['blue', 'green', 'red', 'yellow']
+numbers = [1, 10, 5, 3]
+numbers.sort()
+numbers #  [1, 3, 5, 10]
+
+colors = ["red", "yellow", "green", "blue"]
+colors.sort(key=len)
+colors #  ['red', 'blue', 'green', 'yellow']
+
+def get_second_element(item):
+    return item[1]
+
+items = [(4, 1), (1, 2), (-9, 0)]
+items.sort(key=get_second_element)
+items #  [(-9, 0), (4, 1), (1, 2)]
+
+######
+#1.
+data = ((1,2), (3, 4))
+
+#2.
+i = 1
+for item in data:
+    print(f"Row {i} sum: {sum(item)}")
+    i = i + 1
+
+#3.
+numbers = [4, 3, 2, 1]
+
+#4.
+copy_numbers = numbers[:]
+
+#5.
+numbers.sort()
+######
+
+# ------9.4------
+
+
+universities = [
+    ['California Institutr of Technology', 2175, 37704],
+    ['Harvard', 19627, 39849],
+    ['Massachusets Institute of Technology', 10566, 40732],
+    ['Princeton', 7802, 37000],
+    ['Rice', 5879, 35551],
+    ['Stanford', 19535, 40569],
+    ['Yale', 11701, 40500]
+    ]
