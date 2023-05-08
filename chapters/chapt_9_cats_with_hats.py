@@ -83,3 +83,14 @@ print(cats_with_hats)
 ##        print(f"Cat {cats} has a hat.")
 ##    else:
 ##        print(f"Cat {cats} is hatless!")
+
+
+cat_with_hat = []
+for i in range(1, 100 + 1):
+    for cat in range(1, 100 + 1):
+        if cat % i == 0:
+            if cat in cat_with_hat:
+                cat_with_cat.remove(cat)
+            else:
+                 cat_with_cat.append(cat)
+print(cat_with_cat)
