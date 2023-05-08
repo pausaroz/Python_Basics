@@ -308,6 +308,45 @@ numbers.sort()
 ######
 
 # ------9.4------
+#challenge
+
+def enrollment_stats(list_of_list_with_universities):
+    
+#    enrolled_students = []
+#    annual_tuition_fees = []
+
+#    for item in list_of_list_with_universities:
+#        for i in range(len(item)):
+#            if i == 1:
+#                enrolled_students.append(item[i])
+#            elif i == 2:
+#                annual_tuition_fees.append(item[i])       
+#                    
+#    return enrolled_students, annual_tuition_fees
+
+    total_students = []
+    total_tuition = []
+
+    for university in list_of_list_with_universities:
+        total_students.append(university[1])
+        total_tuition.append(university[2])
+
+    return total_students, total_tuition
+
+def mean(values):
+    """Return the mean value in the list `values`"""
+    return sum(values) / len(values)
+
+def median(values):
+    """Return the median value of the list `values`"""
+    values.sort()
+    if len(values) % 2 == 1:
+        center_index = int(len(values) / 2)
+        return values[center_index]
+    else:
+        left_center_index = (len(values) - 1) // 2
+        right_center_index = (len(values) + 1) // 2
+        return mean([values[left_center_index], values[right_center_index]])
 
 
 universities = [
@@ -319,3 +358,247 @@ universities = [
     ['Stanford', 19535, 40569],
     ['Yale', 11701, 40500]
     ]
+
+totals = enrollment_stats(universities)
+
+print("\n")
+print("*****" * 6)
+print(f"Total students:   {sum(totals[0]):,}")
+print(f"Total tuition:  $ {sum(totals[1]):,}")
+print(f"\nStudent mean:     {mean(totals[0]):,.2f}")
+print(f"Student median:   {median(totals[0]):,}")
+print(f"\nTuition mean:   $ {mean(totals[1]):,.2f}")
+print(f"Tuition median: $ {median(totals[1]):,}")
+print("*****" * 6)
+print("\n")
+
+# ------9.5------
+#challenge
+
+import random
+
+noun = [
+    "fossil",
+    "horse",
+    "aardvark",
+    "judge",
+    "chef",
+    "mango",
+    "extrovert",
+    "gorilla",
+]
+verb = [
+    "kicks",
+    "jingles",
+    "bounces",
+    "slurps",
+    "meows",
+    "explodes",
+    "curdles",
+]
+adjective = [
+    "furry",
+    "balding",
+    "incredulous",
+    "fragrant",
+    "exuberant",
+    "glistening",
+]
+preposition = [
+    "against",
+    "after",
+    "into",
+    "beneath",
+    "upon",
+    "for",
+    "in",
+    "like",
+    "over",
+    "within",
+]
+adverb = [
+    "curiously",
+    "extravagantly",
+    "tantalizingly",
+    "furiously",
+    "sensuously",
+]
+
+def choice_3_element(list_with_string):
+    """Rettn 3 random element not repeat itself from list with string"""
+    string1 = random.choice(list_with_string)
+    string2 = random.choice(list_with_string)
+    string3 = random.choice(list_with_string)
+
+    while string1 == string2:
+        string2 = random.choice(list_with_string)
+
+    while string1 == string3 or string2 == string3:
+        string3 = random.choice(list_with_string)
+    
+    return string1, string2, string3
+
+
+def make_poem(list_noun, list_verb, list_adjective, list_preposition, list_adverb):
+    """Create a randomly generated poem, returned as a multi-line string."""
+    noun1, noun2, noun3 = choice_3_element(list_noun)
+    verb1, verb2, verb3 = choice_3_element(list_verb)
+    adj1, adj2, adj3 = choice_3_element(list_adjective)
+
+    prep1 = random.choice(list_preposition)
+    prep2 = random.choice(list_preposition)
+    if prep1 == prep2:
+        prep2 = random.choice(list_preposition)
+    
+    adverb1 = random.choice(list_adverb)
+    przedimek = ""
+    if adverb1[0] in  ["a", "e", "i", "o", "u", "y"]:
+        article = "An"
+    else:
+        article = "A"
+
+    if "aeiou".find(adj1[0]) != -1:  # First letter is a vowel
+        article = "An"
+    else:
+        article = "A"
+
+    print(f"{article} {adj1} {noun1}")
+    print(f"{article} {adj1} {noun1} {verb1} {prep1} the {adj2} {noun2}")
+    print(f"{adverb1}, the {noun1} {verb2}")
+    print(f"the {noun2} {verb3} {prep2} a {adj3} {noun3}\n")
+
+#    poem = (
+#        f"{article} {adj1} {noun1}\n\n"
+#        f"{article} {adj1} {noun1} {verb1} {prep1} the {adj2} {noun2}\n"
+#        f"{adverb1}, the {noun1} {verb2}\n"
+#        f"the {noun2} {verb3} {prep2} a {adj3} {noun3}"
+#    )
+
+#    return poem
+
+
+make_poem(noun, verb, adjective, preposition, adverb)
+#poem = make_poem(noun, verb, adjective, preposition, adverb)
+#print(poem)
+
+# ------9.6------
+
+capitals = {
+    "California": "Sacramento",
+    "New York": "Albany",
+    "Texas": "Austin",
+    }
+
+key_value_pairs = (
+    ("California", "Sacramento"),
+    ("New York", "Albany"),
+    ("Texas", "Austin")
+    )
+
+capitals_2 = dict(key_value_pairs)
+
+capitals["Texas"] #  'Austin'
+
+capitals_list = ["Sacramento", "Albany", "Austin"]
+capitals_list[0] #  'Sacramento'
+capitals_list[2] #  'Austin'
+
+capitals["Colorado"] = "Denver"
+capitals #  {'California': 'Sacramento', 'New York': 'Albany',
+         #   'Texas': 'Austin', 'Colorado': 'Denver'}
+capitals["Texas"] = "Houston"
+capitals #{'California': 'Sacramento', 'New York': 'Albany',
+         # 'Texas': 'Houston', 'Colorado': 'Denver'}
+
+del capitals["Texas"]
+capitals # {'California': 'Sacramento', 'New York': 'Albany',
+         # 'Colorado': 'Denver'}
+
+#error
+#capitals["Arizona"] #  KeyError: 'Arizona'
+
+"Ariozna" in capitals #  False
+"California" in capitals #  True
+
+if "Ariozna" in capitals:
+    print(f"The capital of Arizona is {capitals['Arizona']}.")
+
+"Sacramento" in capitals # False
+
+for key in capitals:
+    print(key)
+
+# California
+# New York
+# Colorado
+
+for state in capitals:
+    print(f"The capital of {state} is {capitals[state]}.")
+
+# The capital of California is Sacramento.
+# The capital of New York is Albany.
+# The capital of Colorado is Denver.
+
+capitals.items() # dict_items([('California', 'Sacramento'), ('New York', 'Albany'), ('Colorado', 'Denver')])
+type(capitals.items()) #  <class 'dict_items'>
+
+for state, capital in capitals.items():
+     print(f"The capital of {state} is {capital}.")
+#The capital of California is Sacramento.
+#The capital of New York is Albany.
+#The capital of Colorado is Denver.
+
+capitals[50] = "Hnonlulu"
+capitals #  {'California': 'Sacramento', 'New York': 'Albany', 'Colorado': 'Denver', 50: 'Hnonlulu'}
+
+#error:
+#capitals[[1, 2, 3]] = "Bad" #  TypeError: unhashable type: 'list'
+
+states = {
+    "California": {
+        "capital": "Sacramento",
+        "flower": "California Poppy"
+        },
+    "New York": {
+        "capital": "Albany",
+        "flower": "Rose"
+        },
+    "Texas": {
+        "capital": "Austin",
+        "flower": "Bluebonnet"
+        }
+    }
+
+states["Texas"] #  {'capital': 'Austin', 'flower': 'Bluebonnet'}
+states["Texas"]['flower'] #  'Bluebonnet'
+
+######
+#1.
+captains = {}
+#2.
+captains["Enterprice"] = "Picard"
+captains["Voyager"] = "Janeway"
+captains["Defiant"] = "Sisko"
+#3.
+if "Enterprice" not in captains:
+    captains["Enterprice"] = "unknown"
+if "Discovery" not in captains:
+    captains["Discovery"] = "unknown"
+#4.
+for ship, captain in captains.items():
+    print(f"The {ship} is captained by {captain}.")
+#5.
+del captains["Discovery"]
+captains #  {'Enterprice': 'Picard', 'Voyager': 'Janeway', 'Defiant': 'Sisko'}
+
+#6.
+captains_2 = dict((
+    ("Enterprice", "Picard"),
+    ("Voyager", "Janeway"),
+    ("Defiant", "Sisko")
+    ))
+######
+
+# ------9.7------
+#challenge
+# see: chapt_9_capitals.py
