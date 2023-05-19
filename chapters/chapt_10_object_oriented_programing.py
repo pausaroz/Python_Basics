@@ -258,5 +258,60 @@ test_square = Square(4)
 #3 dzieci
 #walking, running, eating , slleping
 
+
 class Animal:
+    distance = 0
+
+    def __init__(self, species):
+        self.species = species
+
+    def __str__(self):
+        return f"Hello, I'm {self.species}."
+
+    def sounds(self, sound):
+        return f"The {self.species} says {sound}."
+
+    def sleeping(self):
+        self.distance = 0
+        return f"The {self.species} goes to sleep."
+
+    def eating(self):
+        return f"The {self.species} going to eat."
+
+    def poop(self):
+        return f"The {self.species} doing a poop."
+
+    def walk(self, distance_icrementation):
+        try:
+            self.distance = self.distance + distance_icrementation
+            return self.distance
+        except TypeError:
+            return "I need a number"
+
+class Cow(Animal):
+
+    def __init__(self, species="cow"):
+        super().__init__(species)
+
+    def sounds(self, sound="muuu!"):
+        return super().sounds(sound)
+
+
+class Horse(Animal):
     
+    def __init__(self, species="horse"):
+        super().__init__(species)
+
+    def sounds(self, sound="ihaha"):
+        return super().sounds(sound)
+
+class Pig(Animal):
+
+    def __init__(self, species="pig"):
+        super().__init__(species)
+
+    def sounds(self, sound="gruu"):
+        if sound == "kwi"*2:
+            return super().sounds(sound) + f" The {self.species} is hungry!"
+        return super().sounds(sound)
+
