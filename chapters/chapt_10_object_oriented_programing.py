@@ -314,4 +314,3 @@ class Pig(Animal):
         if sound == "kwi"*2:
             return super().sounds(sound) + f" The {self.species} is hungry!"
         return super().sounds(sound)
-
